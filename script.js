@@ -10,7 +10,7 @@ function Converter(){
     numeroINICIAL = numero
 
     if (base >16){
-        alert('A base é maior que o permitido!')
+        console.log('A base é maior que o permitido!')
 
     }if  (base > 10 & base <= 16){
         for(numero = numero; numero >= 1;){
@@ -74,17 +74,21 @@ function PegaValor(){
 var indicador = 0
 
 function MostraValor(){
-    let texto = document.createElement('div')
-    let historico = document.createElement('h2')
-    texto.textContent = `O numero "${numeroINICIAL}" na base "${base}" fica: ${string}`;
-    indicador +=1
-    if (indicador == 1){
-        historico.textContent = 'Historico: '
-        textDiv.appendChild(historico)
-    } else {
-        console.log('o historico já ta ai')
+    if(base < 16){
+        let texto = document.createElement('div')
+        let historico = document.createElement('h2')
+        texto.textContent = `O numero "${numeroINICIAL}" na base "${base}" fica: ${string}`;
+        indicador +=1
+        if (indicador == 1){
+            historico.textContent = 'Historico: '
+            textDiv.appendChild(historico)
+        } else {
+            console.log('o historico já ta ai')
+        }
+        textDiv.appendChild(texto)
+    } else{
+        alert('A base é maior que o permitido! (16)')
     }
-    textDiv.appendChild(texto)
 }
 
 function ApagaValores(){
