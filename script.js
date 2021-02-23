@@ -1,7 +1,3 @@
-// // var readlineSync = require('readline-sync');
-// readlineSync.question("Insira o numero Decimal: ") || 65;
-// readlineSync.question("Insira o numero correspondente a base que quer converter: ") || 2;
-
 var numero  
 var resto
 var base 
