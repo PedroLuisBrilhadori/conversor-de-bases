@@ -74,7 +74,7 @@ function PegaValor(){
 var indicador = 0
 
 function MostraValor(){
-    if(base < 16){
+    if(base <= 16){
         let texto = document.createElement('div')
         let historico = document.createElement('h2')
         texto.textContent = `O numero "${numeroINICIAL}" na base "${base}" fica: ${string}`;
