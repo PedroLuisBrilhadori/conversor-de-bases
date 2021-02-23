@@ -1,4 +1,5 @@
-var numero  
+var KEY_ENTER = 13;
+var numero 
 var resto
 var base 
 var NumeroFinal = new Array()
@@ -106,4 +107,10 @@ function LimpaHistorico() {
 
 function Exponencial(){
     
+}
+
+function press(key){
+        if (key == KEY_ENTER){
+            PegaValor()
+        }
 }
