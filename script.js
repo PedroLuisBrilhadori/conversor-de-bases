@@ -9,7 +9,10 @@ var numeroINICIAL = numero
 function Converter(){
     numeroINICIAL = numero
 
-    if  (base >= 10){
+    if (base >16){
+        alert('A base é maior que o permitido!')
+
+    }if  (base > 10 & base <= 16){
         for(numero = numero; numero >= 1;){
             resto = numero % base
             numero = Math.floor(numero / base)    
@@ -36,7 +39,6 @@ function Converter(){
         for (let i = 0; i < NumeroFinal.length; i++){
                 string += NumeroFinal[i]
         }
-        console.log("O numero:", numeroINICIAL,"em base:", base,"fica:",string)
 
 
     } if (base < 10 && base >= 2){
@@ -51,7 +53,6 @@ function Converter(){
         for (let i = 0; i < NumeroFinal.length; i++){
             string += NumeroFinal[i]
         }
-        console.log("O numero:", numeroINICIAL,"em base:", base,"fica:",string)
     } 
 }
 
@@ -97,4 +98,8 @@ function ApagaValores(){
 
 function LimpaHistorico() { 
     document.location.reload()
+}
+
+function Exponencial(){
+    
 }
