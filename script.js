@@ -110,8 +110,8 @@ function Exponencial(){
 }
 
 function press(key){
-        // if (key == KEY_ENTER){
-        //     PegaValor()
-        // }
-        alert(key)
-}
+        if (key == KEY_ENTER){
+            PegaValor()
+        }
+        // alert(key)
+    }
