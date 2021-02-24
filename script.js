@@ -79,9 +79,10 @@ function BotaoConverter(){
 
     function MostraValor(){
         if(base <= 16){
-            let texto = document.createElement('div')
+            var texto = document.createElement('div')
             let historico = document.createElement('h2')
             texto.textContent = `O numero "${numeroINICIAL}" na base "${base}" fica: ${string}`;
+            texto.id = 'textoDivStr'
             indicador +=1
     
             if (indicador == 1){
@@ -107,7 +108,13 @@ function BotaoConverter(){
 }
 
 function LimpaHistorico() { 
-    document.location.reload()
+    // let node = document.getElementById('textoDivStr')
+    // if (node.parentNode){
+    //     console.log(node.parentNode)
+    //     node.parentNode.removeChild(node)
+        
+    // }
+    document.location.reload();
 }
 
 function press(key){
