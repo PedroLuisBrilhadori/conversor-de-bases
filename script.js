@@ -1,10 +1,12 @@
 var KEY_ENTER = 13;
+var SHIFT_QKEY = 47; 
 var numero 
 var resto
 var base 
 var NumeroFinal = new Array()
 var string = ''
 var numeroINICIAL = numero
+var expoente
 
 
 function Converter(){
@@ -106,12 +108,18 @@ function LimpaHistorico() {
 }
 
 function Exponencial(){
-    
+    for (let i = 0; i > NumeroFinal.length;){
+        for (let b = i; b > i; b++){
+        }
+        i++
+    }
 }
 
 function press(key){
         if (key == KEY_ENTER){
-            PegaValor()
+            PegaValor();
+        } if (key == SHIFT_QKEY){
+            LimpaHistorico();
         }
         // alert(key)
     }
