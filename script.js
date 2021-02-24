@@ -8,10 +8,9 @@ var string = ''
 var numeroINICIAL = numero
 var expoente
 
-
 function Converter(){
-    numeroINICIAL = numero
 
+    numeroINICIAL = numero
     if (base >16){
         console.log('A base é maior que o permitido!')
 
@@ -43,7 +42,6 @@ function Converter(){
                 string += NumeroFinal[i]
         }
 
-
     } if (base < 10 && base >= 2){
 
         for (numero = numero ; numero >= 1 ;){
@@ -59,67 +57,64 @@ function Converter(){
     } 
 }
 
-function PegaValor(){
-    numero = document.getElementById('NUMERO').value
-    base = document.getElementById('BASE').value
-    numeroINICIAL = numero 
+indicador = 0
 
-    if (base <= 0 | numero <= 0){
-        alert("Algo deu errado!")
-    } else{
-        Converter();
-        MostraValor();
-        ApagaValores();
-    }
-
-}
-
-var indicador = 0
-
-function MostraValor(){
-    if(base <= 16){
-        let texto = document.createElement('div')
-        let historico = document.createElement('h2')
-        texto.textContent = `O numero "${numeroINICIAL}" na base "${base}" fica: ${string}`;
-        indicador +=1
-        if (indicador == 1){
-            historico.textContent = 'Historico: '
-            textDiv.appendChild(historico)
-        } else {
-            console.log('o historico já ta ai')
+function BotaoConverter(){
+    
+    return PegaValor();
+    
+    function PegaValor(){
+        numero = document.getElementById('NUMERO').value
+        base = document.getElementById('BASE').value
+        numeroINICIAL = numero 
+    
+        if (base <= 0 | numero <= 0){
+            alert("Algo deu errado!")
+        } else{
+            Converter();
+            MostraValor();
+            ApagaValores();
         }
-        textDiv.appendChild(texto)
-    } else{
-        alert('A base é maior que o permitido! (16)')
     }
-}
 
-function ApagaValores(){
-    numero = undefined
-    base = undefined
-    string = ''
-    resto = undefined
-    NumeroFinal = []
-    numeroINICIAL = undefined
+    function MostraValor(){
+        if(base <= 16){
+            let texto = document.createElement('div')
+            let historico = document.createElement('h2')
+            texto.textContent = `O numero "${numeroINICIAL}" na base "${base}" fica: ${string}`;
+            indicador +=1
+    
+            if (indicador == 1){
+                historico.textContent = 'Historico: '
+                textDiv.appendChild(historico)
+            } else {
+                console.log('o historico já ta ai')
+            }
+            textDiv.appendChild(texto)
+        } else{
+            alert('A base é maior que o permitido! (16)')
+        }
+    }
+    
+    function ApagaValores(){
+        numero = undefined
+        base = undefined
+        string = ''
+        resto = undefined
+        NumeroFinal = []
+        numeroINICIAL = undefined
+    }
 }
 
 function LimpaHistorico() { 
     document.location.reload()
 }
 
-function Exponencial(){
-    for (let i = 0; i > NumeroFinal.length;){
-        for (let b = i; b > i; b++){
-        }
-        i++
-    }
-}
-
 function press(key){
         if (key == KEY_ENTER){
-            PegaValor();
+            BotaoConverter();
         } if (key == SHIFT_QKEY){
             LimpaHistorico();
         }
         // alert(key)
-    }
+}
