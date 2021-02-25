@@ -17,7 +17,7 @@ function Converter(){
     }if  (base > 10 & base <= 16){
         for(numero = numero; numero >= 1;){
             resto = numero % base
-            numero = Math.floor(numero / base)    
+            numero = Math.floor(numero / base)
             
             if (resto == 10){
                 resto = "A"
@@ -73,7 +73,7 @@ function BotaoConverter(){
         } else{
             Converter();
             MostraValor();
-            ApagaValores();
+           ApagaValores();
         }
     }
 

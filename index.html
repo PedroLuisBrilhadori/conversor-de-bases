@@ -7,9 +7,9 @@
     <title>Conversor de bases</title>
 </head>
 <body onKeypress='press(event.keyCode)'>
-    <div style="text-align: center;">
+    <div class='DivInputs' id='DivInputs'>
         <div>
-            <h2>Conversor de bases</h2>
+            <h2>Conversor de bases númericas</h2>
         </div>
         <div >
             <div>
@@ -17,7 +17,7 @@
                 <input type="number" id='NUMERO'>
             </div>
             <div style="margin-top: 10px">
-                <label>Base: </label>
+                <label>Base:</label>
                 <input type="number" id='BASE'>
             </div>
         </div>
@@ -29,9 +29,13 @@
         <div>
             <p>teclas de atalho: Shift + alt + Q = Limpa histórico</p>
         </div>
+    </div>
+    <div class='historicoDiv'>
         <div class='textDiv' id='textDiv' style="font-family: Verdana, Geneva, Tahoma, sans-serif">
         </div>
     </div>
+    
+    <link rel='stylesheet' type='text/css' href="styles.css" media='screen'>
     <script src="script.js"></script>
 </body>
 </html>
