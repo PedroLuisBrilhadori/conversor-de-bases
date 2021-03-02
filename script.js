@@ -81,7 +81,7 @@ function BotaoConverter(){
     }
 
     function MostraValor(){
-        if(base <= 16){
+        if(base > 10 & base <= 16){
             var texto = document.createElement('div')
             let historico = document.createElement('h2')
             texto.textContent = `O numero "${numeroINICIAL}" na base "${base}" fica: ${string}`;
@@ -95,8 +95,26 @@ function BotaoConverter(){
                 console.log('o historico já ta ai')
             }
             textDiv.appendChild(texto)
-        } else{
-            alert('A base é maior que o permitido! (16)')
+
+        } if (base == 10){
+            return console.log('Já está em decimal')
+
+        } if (base < 10 && base >= 2){
+            var texto = document.createElement('div')
+            let historico = document.createElement('h2')
+            texto.textContent = `O numero "${numeroINICIAL}" na base "${base}" fica: ${string}`;
+            texto.id = 'textoDivStr'
+            indicador +=1
+    
+            if (indicador == 1){
+                historico.textContent = 'Historico: '
+                textDiv.appendChild(historico)
+            } else {
+                console.log('o historico já ta ai')
+            }
+            textDiv.appendChild(texto)  
+        } if (base > 16){
+            alert('A base é maior que o permitido (16)')
         }
     }
     
