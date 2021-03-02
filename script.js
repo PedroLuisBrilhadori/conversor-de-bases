@@ -14,6 +14,7 @@ function Converter(){
     if (base >16){
         console.log('A base é maior que o permitido!')
 
+
     }if  (base > 10 & base <= 16){
         for(numero = numero; numero >= 1;){
             resto = numero % base
@@ -54,7 +55,9 @@ function Converter(){
         for (let i = 0; i < NumeroFinal.length; i++){
             string += NumeroFinal[i]
         }
-    } 
+    } if (base == 10){
+        alert(`O número: ${numero} já está em decimal`)
+    }
 }
 
 indicador = 0
